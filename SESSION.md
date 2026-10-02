@@ -12,7 +12,7 @@ Mettre à jour ce fichier en fin de chaque session agent pour limiter la taille 
 
 | Brique | Statut | Branche | PR | Notes |
 |--------|--------|---------|-----|-------|
-| 00 Bootstrap | En cours | `brique/00-bootstrap` | | |
+| 00 Bootstrap | PR ouverte | `cursor/brique-00-bootstrap-288f` (roadmap : `brique/00-bootstrap`) | draft | |
 | 01 Fondations | À faire | | | |
 | 02 Design system | À faire | | | |
 
