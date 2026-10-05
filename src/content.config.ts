@@ -126,11 +126,6 @@ const configuration = defineCollection({
       subtitle: z.string().default("Retro-Inspired Theme &<br>Built for Astro"),
 
       /**
-       * The URL of the hero image, used as a background image in the hero section.
-       */
-      image: z.url().optional(),
-
-      /**
        * The text displayed in the call-to-action button in the hero section.
        */
       ctaText: z.string().default("View Projects"),

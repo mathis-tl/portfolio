@@ -1,19 +1,22 @@
 ---
+import { Image } from "astro:assets";
+import photo from "../../assets/photo.png";
 import { getConfigurationCollection } from "../../lib/utils";
+import Anchor from "../common/Anchor.astro";
 
 const { data: config } = await getConfigurationCollection();
 ---
 
 <div class="flex flex-col items-center sm:flex-row gap-8">
-  {
-    config.hero.image && (
-      <img
-        src={config.hero.image}
-        alt="Portrait de Mathis Telle"
-        class="rounded-full max-w-40 w-40 h-40 mb-4 z-0 grayscale"
-      />
-    )
-  }
+  <Image
+    src={photo}
+    alt="Portrait de Mathis Telle, souriant, en col roulé bleu marine"
+    width={320}
+    height={320}
+    position="top"
+    loading="eager"
+    class="rounded-full w-40 h-40 shrink-0 object-cover"
+  />
   <div>
     <h1
       class="text-3xl sm:text-4xl font-display font-semibold text-center sm:text-left"
@@ -24,5 +27,8 @@ const { data: config } = await getConfigurationCollection();
       class="text-center text-xl sm:text-2xl font-mono font-medium sm:text-left"
       set:html={config.hero.subtitle}
     />
+    <div class="mt-4 flex justify-center sm:justify-start font-mono">
+      <Anchor url={config.hero.ctaUrl}>{config.hero.ctaText}</Anchor>
+    </div>
   </div>
 </div>
