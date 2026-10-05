@@ -31,6 +31,12 @@ pnpm ci           # Biome CI
 - `public/` : fichiers statiques
 - `AGENTS.md` : règles du projet pour les agents Cursor
 
+## Mise en ligne
+
+Netlify n'est pas relié à ce dépôt. Aucun domaine de production n'est connu, donc `baseUrl` dans `content/configuration.toml` reste `http://localhost:4321`. Il sera remplacé par l'URL réelle une fois le site créé. Ne pas inventer d'adresse `netlify.app`.
+
+`netlify.toml` est prêt : `pnpm build`, dossier `dist/`, Node 22, en-têtes de sécurité. Pas de formulaire, pas d'analytique.
+
 ## Crédits
 
 Basé sur le thème [Zaggonaut](https://github.com/RATIU5/zaggonaut) de RATIU5 (MIT).
