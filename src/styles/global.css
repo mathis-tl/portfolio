@@ -22,23 +22,48 @@
   --color-zag-light-opaque: oklch(from var(--color-neutral-100) l c h / 0.5);
   --color-zag-dark-muted: var(--color-neutral-600);
   --color-zag-light-muted: var(--color-neutral-400);
-  --color-zag-accent-light: var(--color-emerald-400);
-  --color-zag-accent-light-muted: var(--color-emerald-300);
-  --color-zag-accent-dark: var(--color-emerald-600);
-  --color-zag-accent-dark-muted: var(--color-emerald-800);
+  --color-zag-accent-light: var(--px-green);
+  --color-zag-accent-light-muted: color-mix(
+    in srgb,
+    var(--px-green) 72%,
+    transparent
+  );
+  --color-zag-accent-dark: var(--px-green);
+  --color-zag-accent-dark-muted: color-mix(
+    in srgb,
+    var(--px-green) 72%,
+    transparent
+  );
 }
 
 @layer base {
   :root {
+    --px-green: #0b6b32;
+    --px-red: #b42318;
+    --px-blue: #175cd3;
+    --px-purple: #6927da;
+    --px-yellow: #854f0b;
     --zag-stroke: 2px;
     --zag-offset: 6px;
     --zag-transition-duration: 0.15s;
     --zag-transition-timing-function: ease-in-out;
   }
 
+  :root.dark {
+    --px-green: #5eeb9a;
+    --px-red: #ff9b94;
+    --px-blue: #84caff;
+    --px-purple: #d6bbfb;
+    --px-yellow: #fec84b;
+  }
+
   ::selection {
-    background-color: var(--color-zag-accent-light);
-    color: var(--color-zag-dark-muted);
+    background-color: var(--px-green);
+    color: var(--color-zag-light);
+  }
+
+  :root.dark ::selection {
+    color: var(--color-zag-dark);
   }
 
   .zag-transition {
