@@ -16,7 +16,7 @@ Mettre à jour ce fichier en fin de chaque session agent pour limiter la taille 
 | 03 Identité | PR ouverte, revue OK | `cursor/brique-03-identite-e4e0` | #5 | Pas de photo, pas de domaine |
 | 04 Projets | PR ouverte, revue OK | `cursor/brique-04-projets-e4e0` | #6 | Six fiches sourcées, blog retiré |
 | 05 Accessibilité | PR ouverte, revue OK | `cursor/brique-05-a11y-e4e0` | #7 | Clavier, focus, contraste |
-| 06 Netlify | Branche poussée | `cursor/brique-06-netlify-e4e0` | | Domaine réel absent, baseUrl inchangé |
+| 06 Netlify | PR ouverte, revue OK | `cursor/brique-06-netlify-e4e0` | #8 | Domaine réel absent, baseUrl inchangé |
 
 ## Prochaine session
 
