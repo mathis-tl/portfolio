@@ -15,6 +15,8 @@ pnpm dev          # développement local
 pnpm build        # build de production dans dist/
 pnpm preview      # prévisualisation du build
 pnpm lint         # Biome (vérification)
+pnpm lint:fix     # Biome (corrections automatiques)
+pnpm format       # Biome (formatage)
 pnpm check        # astro check
 pnpm ci           # Biome CI
 ```
