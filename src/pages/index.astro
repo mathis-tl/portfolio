@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import Section from "../components/common/Section.astro";
 import FeaturedProjects from "../components/home/FeaturedProjects.astro";
 import Hero from "../components/home/Hero.astro";
+import Skills from "../components/home/Skills.astro";
 import Layout from "../layouts/Layout.astro";
 import { getConfigurationCollection } from "../lib/utils";
 
@@ -55,5 +56,8 @@ const featuredProjects = (
   </Section>
   <Section>
     <FeaturedProjects featuredProjects={featuredProjects} />
+  </Section>
+  <Section>
+    <Skills />
   </Section>
 </Layout>

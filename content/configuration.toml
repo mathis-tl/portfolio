@@ -35,6 +35,16 @@ projectsName = "Projets"
 viewAll = "Voir tout"
 noProjects = "Aucun projet."
 
+[_.skills]
+title = "Compétences"
+groups = [
+  { label = "Données", items = ["Python", "dbt", "DuckDB", "Prefect", "Supabase", "GitHub Actions", "Google Sheets"] },
+  { label = "Qualité et fiabilité", items = ["Tests automatisés", "Validation des données", "Scoring explicable", "Revue humaine des cas douteux", "Benchmarks"] },
+  { label = "IA", items = ["LLM avec garde-fous déterministes"] },
+  { label = "Backend, réseaux et sécurité", items = ["Flask", "MQTT", "ITS-G5", "PKI (CRL, OCSP)", "Docker Compose"] },
+  { label = "Front et outils", items = ["Astro", "TypeScript", "React", "Tailwind CSS", "Retool", "Netlify"] },
+]
+
 [_.menu]
 home = "/"
 projects = "/projects"
