@@ -137,6 +137,19 @@ const configuration = defineCollection({
     }),
 
     /**
+     * The skills section of the homepage, grouped by theme.
+     */
+    skills: z.object({
+      title: z.string(),
+      groups: z.array(
+        z.object({
+          label: z.string(),
+          items: z.array(z.string()),
+        }),
+      ),
+    }),
+
+    /**
      * The personal information of the site owner or author.
      */
     personal: z.object({
