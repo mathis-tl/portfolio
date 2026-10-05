@@ -1,6 +1,6 @@
 # Portfolio Mathis Telle
 
-Site portfolio statique d'ingénieur informatique, en cours de refonte à partir du thème Astro [Zaggonaut](https://zaggonaut.dev) (MIT).
+Site portfolio statique d'ingénieur informatique, en cours de refonte à partir du thème Astro [Zaggonaut](https://github.com/RATIU5/zaggonaut) (MIT).
 
 ## Prérequis
 

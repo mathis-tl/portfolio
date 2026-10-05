@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import Section from "../components/common/Section.astro";
-import FeaturedArticles from "../components/home/FeaturedArticles.astro";
 import FeaturedProjects from "../components/home/FeaturedProjects.astro";
 import Hero from "../components/home/Hero.astro";
 import Layout from "../layouts/Layout.astro";
@@ -11,16 +10,12 @@ const { data: config } = await getConfigurationCollection();
 
 const featuredProjects = (
 	await getCollection("project", (e) => e.data.featured)
-).map((e) => ({
-	...e.data,
-  url: `/projects/${e.data.slug}`,
-}));
-const featuredArticles = (
-	await getCollection("blog", (e) => e.data.featured)
-).map((e) => ({
-	...e.data,
-  url: `/blog/${e.data.slug}`,
-}));
+)
+	.sort((a, b) => a.data.order - b.data.order)
+	.map((e) => ({
+		...e.data,
+		url: `/projects/${e.data.slug}`,
+	}));
 ---
 
 <Layout>
@@ -60,8 +55,5 @@ const featuredArticles = (
   </Section>
   <Section>
     <FeaturedProjects featuredProjects={featuredProjects} />
-  </Section>
-  <Section>
-    <FeaturedArticles featuredArticles={featuredArticles} />
   </Section>
 </Layout>
