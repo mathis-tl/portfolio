@@ -38,11 +38,12 @@ noProjects = "Aucun projet."
 [_.skills]
 title = "Compétences"
 groups = [
-  { label = "Données", items = ["Python", "dbt", "DuckDB", "Prefect", "Supabase", "GitHub Actions", "Google Sheets"] },
-  { label = "Qualité et fiabilité", items = ["Tests automatisés", "Validation des données", "Scoring explicable", "Revue humaine des cas douteux", "Benchmarks"] },
-  { label = "IA", items = ["LLM avec garde-fous déterministes"] },
+  { label = "Données", items = ["SQL", "Prefect", "dbt", "DuckDB", "Supabase", "Airtable", "ETL/ELT", "Parquet", "GitHub Actions", "Google Sheets"] },
+  { label = "Langages", items = ["Python", "JavaScript", "TypeScript", "Java", "C", "C++", "R"] },
+  { label = "Qualité et fiabilité", items = ["Tests unitaires et non-régression", "Validation des données", "Scoring explicable", "Revue humaine des cas douteux", "Benchmarks"] },
+  { label = "IA", items = ["API OpenAI", "LLM avec garde-fous déterministes"] },
   { label = "Backend, réseaux et sécurité", items = ["Flask", "MQTT", "ITS-G5", "PKI (CRL, OCSP)", "Docker Compose"] },
-  { label = "Front et outils", items = ["Astro", "TypeScript", "React", "Tailwind CSS", "Retool", "Netlify"] },
+  { label = "Front et outils", items = ["Astro", "React", "Node.js", "Tailwind CSS", "Retool", "Netlify", "Git", "Docker"] },
 ]
 
 [_.menu]
