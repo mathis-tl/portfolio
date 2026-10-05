@@ -76,6 +76,7 @@ const menuLabels = {
 <script>
   const button = document.getElementById("menu-bouton");
   const nav = document.getElementById("navigation");
+  const pageParts = document.querySelectorAll("main, footer");
   const mobileQuery = window.matchMedia("(width < 40rem)");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let isOpen = false;
@@ -91,9 +92,11 @@ const menuLabels = {
     if (isMobile) {
       nav.style.transform = isOpen ? "translateY(0)" : "translateY(-100%)";
       nav.toggleAttribute("inert", !isOpen);
+      for (const part of pageParts) part.toggleAttribute("inert", isOpen);
     } else {
       nav.style.transform = "translateY(0)";
       nav.removeAttribute("inert");
+      for (const part of pageParts) part.removeAttribute("inert");
       isOpen = false;
     }
 

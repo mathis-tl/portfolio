@@ -22,18 +22,6 @@
   --color-zag-light-opaque: oklch(from var(--color-neutral-100) l c h / 0.5);
   --color-zag-dark-muted: var(--color-neutral-600);
   --color-zag-light-muted: var(--color-neutral-400);
-  --color-zag-accent-light: var(--px-green);
-  --color-zag-accent-light-muted: color-mix(
-    in srgb,
-    var(--px-green) 72%,
-    transparent
-  );
-  --color-zag-accent-dark: var(--px-green);
-  --color-zag-accent-dark-muted: color-mix(
-    in srgb,
-    var(--px-green) 72%,
-    transparent
-  );
 }
 
 @layer base {
