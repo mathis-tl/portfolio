@@ -26,6 +26,12 @@ Public : recruteurs tech et leads data qui lisent le site en 30 secondes.
 - pnpm dev / pnpm build / pnpm preview
 - pnpm check (astro check), pnpm lint (biome), pnpm format
 
+## Cursor Cloud specific instructions
+- Node 22 et pnpm 10.6.0 sont déjà sur le PATH d'un shell de login. Dépendances : `pnpm install --frozen-lockfile`.
+- Serveur de dev : `pnpm dev --host 0.0.0.0 --port 4321` (http://127.0.0.1:4321). Ne pas placer `--` avant `--host` : Astro 7 traite alors `--host` comme une commande et quitte.
+- Vérification : `pnpm run ci && pnpm check && pnpm build`, puis ouvrir `/`, `/projects/zaggonaut` et `/blog/intro-to-html`. Le bouton de thème et le menu mobile (375 px) sont les seules interactions client.
+- Aucun secret et aucun service externe.
+
 ## Workflow
 Une brique = une branche brique/NN-nom = une PR vers main. Commits conventionnels (feat:, fix:, refactor:, chore:, docs:, content:).
 Avant de déclarer une tâche finie : pnpm lint && pnpm check && pnpm build, puis vérification visuelle à 375 px et 1280 px en clair et en sombre.
