@@ -118,17 +118,17 @@ const configuration = defineCollection({
       /**
        * The title displayed in the hero section.
        */
-      title: z.string().default("Zaggonaut"),
+      title: z.string(),
 
       /**
        * The subtitle displayed in the hero section.
        */
-      subtitle: z.string().default("Retro-Inspired Theme &<br>Built for Astro"),
+      subtitle: z.string(),
 
       /**
        * The text displayed in the call-to-action button in the hero section.
        */
-      ctaText: z.string().default("View Projects"),
+      ctaText: z.string(),
 
       /**
        * The URL of the call-to-action button in the hero section.
@@ -143,7 +143,7 @@ const configuration = defineCollection({
       /**
        * The name of the site owner or author, used in various places throughout the site.
        */
-      name: z.string().default("Zaggonaut"),
+      name: z.string(),
 
       /**
        * The GitHub profile URL of the site owner or author.
@@ -168,17 +168,17 @@ const configuration = defineCollection({
       /**
        * The text used when displaying the projects section on the homepage.
        */
-      projectsName: z.string().default("Projects"),
+      projectsName: z.string(),
 
       /**
        * The text used for the "View All" button in the projects section.
        */
-      viewAll: z.string().default("View All"),
+      viewAll: z.string(),
 
       /**
        * The text displayed when there are no projects found.
        */
-      noProjects: z.string().default("No projects found."),
+      noProjects: z.string(),
     }),
 
     /**
