@@ -1,66 +1,36 @@
-![Zaggonaut, a retro-inspired theme for Astro.](./images/README.png)
+# Portfolio Mathis Telle
 
-Zaggonaut is a retro-inspired black & white theme for Astro, built using TypeScript, TailwindCSS, and of course, Astro.
+Site portfolio statique d'ingénieur informatique, en cours de refonte à partir du thème Astro [Zaggonaut](https://zaggonaut.dev) (MIT).
 
-> [!IMPORTANT]
-> Now using Astro 7!
+## Prérequis
 
-If you are looking for the original Zaggonaut theme, you can find it [on the v1 branch](https://github.com/RATIU5/zaggonaut/tree/v1).
+- Node.js 22 (voir `.nvmrc`)
+- [pnpm](https://pnpm.io/) 10
 
-## Getting Started
-
-[View the demo](https://zaggonaut.dev) or [view the source code](https://github.com/RATIU5/zaggonaut).
-
-Alternatively, you can create a new Astro project with Zaggonaut like this:
+## Commandes
 
 ```bash
-# pnpm
-pnpm create astro@latest --template RATIU5/zaggonaut
+pnpm install
+pnpm dev          # développement local
+pnpm build        # build de production dans dist/
+pnpm preview      # prévisualisation du build
+pnpm lint         # Biome (vérification)
+pnpm lint:fix     # Biome (corrections automatiques)
+pnpm format       # Biome (formatage)
+pnpm check        # astro check
+pnpm ci           # Biome CI
 ```
 
-> [!IMPORTANT]  
-> Currently, `pnpm` is the only supported package manager due to `npm` throwing peer-dependency conflicts.
+## Structure
 
-## Features
+- `src/pages/` : routes Astro
+- `src/components/` : composants
+- `src/layouts/` : gabarits de page
+- `src/styles/` : styles globaux (Tailwind 4)
+- `content/` : contenu (projets, configuration TOML)
+- `public/` : fichiers statiques
+- `AGENTS.md` : règles du projet pour les agents Cursor
 
-- Content Collections
-- Dark & light mode
-- Customizable colors
-- 100 / 100 Lighthouse score
-- Fully accessible
-- Fully responsive
-- Type-safe
-- SEO-friendly
+## Crédits
 
-## Customization
-
-The entire theme is fully customizable. The theme is setup a specific way to make it easy to customize.
-
-### Colors
-
-You can customize the colors of the theme by editing the `src/styles/global.css` file.
-This file uses Tailwind CSS and CSS variables to customize the colors of the theme.
-Zaggonaut uses the following CSS variables:
-
-- `--color-zag-dark`: The dark color of the theme
-- `--color-zag-light`: The light color of the theme
-- `--color-zag-dark-muted`: The dark color of the theme with a slight opacity
-- `--color-zag-light-muted`: The light color of the theme with a slight opacity
-- `--color-zag-accent-light`: The light accent color of the theme
-- `--color-zag-accent-light-muted`: The light accent color of the theme with a slight opacity
-- `--color-zag-accent-dark`: The dark accent color of the theme
-- `--color-zag-accent-dark-muted`: The dark accent color of the theme with a slight opacity
-
-### Content Customization
-
-95% of the content you'll want to customize will be located inside the `content` directory. Let's break down the specific files/directories you may want to edit:
-
-- `content/configuration.toml`: This file contains the site configuration, such as metadata, social links, and text content.
-
-- `content/blogs/`: This directory contains your blog posts. Each post is a Markdown file with metadata in the frontmatter at the top.
-
-- `content/projects/`: This directory contains your projects. Each project is a Markdown file also with metadata in the frontmatter.
-
-## Ready To Try?
-
-Check out [the theme website](https://zaggonaut.dev) to give it a spin!
+Basé sur le thème [Zaggonaut](https://github.com/RATIU5/zaggonaut) de RATIU5 (MIT).
