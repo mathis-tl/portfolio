@@ -11,11 +11,6 @@ description = "Data engineer, profil polyvalent. Premier CDI en data engineering
 longDescription = "Ingénieur informatique, Université Paris-Saclay (ISTY). Data engineer, profil polyvalent : pipelines de données, backend, sécurité, réseaux, outils front."
 keywords = ["data engineering", "Mathis Telle"]
 
-[_.blogMeta]
-title = "Articles"
-description = "Articles de Mathis Telle."
-keywords = ["data engineering", "Mathis Telle"]
-
 [_.projectMeta]
 title = "Projets"
 description = "Projets de Mathis Telle."
@@ -36,13 +31,10 @@ name = "Mathis Telle"
 githubProfile = "https://github.com/mathis-tl"
 
 [_.texts]
-articlesName = "Articles"
 projectsName = "Projets"
 viewAll = "Voir tout"
-noArticles = "Aucun article."
 noProjects = "Aucun projet."
 
 [_.menu]
 home = "/"
 projects = "/projects"
-blog = "/blog"

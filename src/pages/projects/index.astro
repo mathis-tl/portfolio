@@ -6,7 +6,7 @@ import Layout from "../../layouts/Layout.astro";
 import { getConfigurationCollection } from "../../lib/utils";
 
 const projects = (await getCollection("project")).sort(
-	(a, b) => b.data.timestamp.valueOf() - a.data.timestamp.valueOf(),
+	(a, b) => a.data.order - b.data.order,
 );
 
 const { data: config } = await getConfigurationCollection();
