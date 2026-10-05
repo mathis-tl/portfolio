@@ -3,10 +3,9 @@ title: A Basic Introduction to HTML
 slug: intro-to-html
 description: A brief guide covering the essentials of HTML.
 longDescription: HTML is the foundation of all websites. This guide will walk you through creating your first simple website using HTML.
-cardImage: "https://zaggonaut.dev/michael-dam-unsplash.webp"
 tags: ["code", "html"]
 readTime: 4
-featured: true
+featured: false
 timestamp: 2024-12-18T02:39:03+00:00
 ---
 
