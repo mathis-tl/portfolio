@@ -1,6 +1,6 @@
 # Portfolio Mathis Telle
 
-Site portfolio statique d'ingénieur informatique, en cours de refonte à partir du thème Astro [Zaggonaut](https://zaggonaut.dev) (MIT).
+Site portfolio statique d'ingénieur informatique, en cours de refonte à partir du thème Astro [Zaggonaut](https://github.com/RATIU5/zaggonaut) (MIT).
 
 ## Prérequis
 
@@ -30,6 +30,16 @@ pnpm ci           # Biome CI
 - `content/` : contenu (projets, configuration TOML)
 - `public/` : fichiers statiques
 - `AGENTS.md` : règles du projet pour les agents Cursor
+
+## Mise en ligne
+
+Le site Netlify existant est `portfolio-mathistelle` (https://portfolio-mathistelle.netlify.app). `baseUrl` dans `content/configuration.toml` pointe dessus.
+
+`netlify.toml` est prêt : `pnpm build`, dossier `dist/`, Node 22, en-têtes de sécurité. Pas de formulaire, pas d'analytique.
+
+## Contact
+
+Le pied de page et le menu exposent l'e-mail `tellemathis@gmail.com`, le profil LinkedIn et le lien « CV (PDF) » vers `public/cv-mathis-telle.pdf` (fichier fourni par Mathis Telle). Pas de formulaire. Le numéro de téléphone reste uniquement dans ce PDF.
 
 ## Crédits
 

@@ -10,11 +10,16 @@ Mettre à jour ce fichier en fin de chaque session agent pour limiter la taille 
 
 | Brique | Statut | Branche | PR | Notes |
 |--------|--------|---------|-----|-------|
-| 00 Bootstrap | PR ouverte, CI verte | `brique/00-bootstrap` | #1 | Simplification faite, review indépendante à suivre |
-| 01 Fondations | À faire | | | |
-| 02 Design system | À faire | | | |
+| 00 Bootstrap | Fusionnée | `brique/00-bootstrap` | #1 | |
+| 01 Fondations | PR ouverte, revue OK | `cursor/brique-01-fondations-e4e0` | #3 | Polices Fontsource, lang=fr |
+| 02 Design system | PR ouverte, revue OK | `cursor/brique-02-design-e4e0` | #4 | Tokens `--px-*` |
+| 03 Identité | PR ouverte, revue OK | `cursor/brique-03-identite-e4e0` | #5 | Pas de photo, pas de domaine |
+| 04 Projets | PR ouverte, revue OK | `cursor/brique-04-projets-e4e0` | #6 | Sept fiches sourcées, blog retiré |
+| 05 Accessibilité | PR ouverte, revue OK | `cursor/brique-05-a11y-e4e0` | #7 | Clavier, focus, contraste |
+| 06 Netlify | PR ouverte, revue OK | `cursor/brique-06-netlify-e4e0` | #8 | baseUrl posé ensuite sur la brique 07 |
+| 07 Photo | PR #9, brouillon | `cursor/brique-07-photo-e4e0` | #9 | Portrait, compétences, site en ligne |
+| 08 Contact | PR ouverte | `cursor/brique-08-contact-e4e0` | #10 | E-mail, LinkedIn et CV PDF |
 
 ## Prochaine session
 
-1. Review indépendante de la PR #1, puis fusion par Mathis.
-2. Démarrer la brique 01.
+1. Revue de la brique 08 avec le CV, puis fusion de la pile dans `main` sans squash.
