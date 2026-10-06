@@ -137,6 +137,16 @@ const configuration = defineCollection({
     }),
 
     /**
+     * The about section of the homepage.
+     */
+    about: z.object({
+      title: z.string(),
+      paragraphs: z.array(z.string()),
+      interestsLabel: z.string(),
+      interests: z.array(z.string()),
+    }),
+
+    /**
      * The skills section of the homepage, grouped by theme.
      */
     skills: z.object({

@@ -1,0 +1,24 @@
+---
+import { getConfigurationCollection } from "../../lib/utils";
+
+const { data: config } = await getConfigurationCollection();
+const { about } = config;
+---
+
+<h2 class="font-display text-lg sm:text-xl leading-loose text-px-purple">
+  {about.title}
+</h2>
+<div class="my-8 flex flex-col gap-4">
+  {about.paragraphs.map((text) => <p>{text}</p>)}
+  <h3 class="mt-2 text-xl font-medium">{about.interestsLabel}</h3>
+  <ul class="flex flex-col gap-2">
+    {
+      about.interests.map((item) => (
+        <li class="flex items-center gap-3">
+          <span class="inline-block h-2 w-2 shrink-0 bg-px-purple" aria-hidden="true" />
+          {item}
+        </li>
+      ))
+    }
+  </ul>
+</div>

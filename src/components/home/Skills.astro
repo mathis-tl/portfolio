@@ -2,19 +2,27 @@
 import { getConfigurationCollection } from "../../lib/utils";
 
 const { data: config } = await getConfigurationCollection();
+
+const shadows = [
+  "shadow-[3px_3px_0_var(--px-green)]",
+  "shadow-[3px_3px_0_var(--px-blue)]",
+  "shadow-[3px_3px_0_var(--px-purple)]",
+  "shadow-[3px_3px_0_var(--px-red)]",
+  "shadow-[3px_3px_0_var(--px-yellow)]",
+];
 ---
 
-<h2 class="font-display text-lg sm:text-xl leading-loose">
+<h2 class="font-display text-lg sm:text-xl leading-loose text-px-blue">
   {config.skills.title}
 </h2>
 <ul class="my-8 flex flex-col gap-6">
   {
-    config.skills.groups.map((group) => (
+    config.skills.groups.map((group, index) => (
       <li class="flex flex-col gap-3">
         <h3 class="text-xl font-medium">{group.label}</h3>
         <ul class="flex flex-row flex-wrap gap-2">
           {group.items.map((item) => (
-            <li class="-zag-text -zag-bg zag-transition px-2 py-1 text-sm font-semibold">
+            <li class:list={["zag-bg zag-text zag-transition border-2 border-zag-dark px-2 py-1 text-sm font-semibold dark:border-zag-light", shadows[index % shadows.length]]}>
               {item}
             </li>
           ))}
