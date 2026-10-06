@@ -48,7 +48,28 @@ const year = date.getFullYear();
           les masquer.
         </p>
       </div>
-      <div class="flex flex-row sm:flex-col gap-4">
+      <div class="flex flex-row sm:flex-col gap-4 items-start">
+        {
+          config.personal.email && (
+            <Anchor
+              url={`mailto:${config.personal.email}`}
+              aria-label="Envoyer un e-mail à Mathis Telle"
+            >
+              E-mail
+            </Anchor>
+          )
+        }
+        {
+          config.personal.linkedinProfile && (
+            <Anchor
+              url={config.personal.linkedinProfile}
+              external
+              aria-label="Profil LinkedIn de Mathis Telle"
+            >
+              LinkedIn
+            </Anchor>
+          )
+        }
         {
           config.personal.githubProfile && (
             <Anchor

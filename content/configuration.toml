@@ -28,6 +28,8 @@ ctaUrl = "/projects"
 [_.personal]
 name = "Mathis Telle"
 githubProfile = "https://github.com/mathis-tl"
+email = "tellemathis@gmail.com"
+linkedinProfile = "https://www.linkedin.com/in/mathis-telle-40a572260"
 
 [_.texts]
 projectsName = "Projets"
