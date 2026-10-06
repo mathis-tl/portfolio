@@ -164,6 +164,21 @@ const configuration = defineCollection({
     }),
 
     /**
+     * Lighthouse scores of the deployed site, shown on the homepage.
+     */
+    lighthouse: z.object({
+      title: z.string(),
+      intro: z.string(),
+      labels: z.array(z.string()),
+      rows: z.array(
+        z.object({
+          label: z.string(),
+          scores: z.array(z.number().int().min(0).max(100)),
+        }),
+      ),
+    }),
+
+    /**
      * The personal information of the site owner or author.
      */
     personal: z.object({
