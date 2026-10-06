@@ -1,28 +1,28 @@
 ---
 import { getConfigurationCollection } from "../../lib/utils";
+import PixelIcon from "../PixelIcon.astro";
 
 const { data: config } = await getConfigurationCollection();
-
-const shadows = [
-  "shadow-[3px_3px_0_var(--px-green)]",
-  "shadow-[3px_3px_0_var(--px-blue)]",
-  "shadow-[3px_3px_0_var(--px-purple)]",
-  "shadow-[3px_3px_0_var(--px-red)]",
-  "shadow-[3px_3px_0_var(--px-yellow)]",
-];
 ---
 
-<h2 class="font-display text-lg sm:text-xl leading-loose text-px-blue">
+<h2 class="font-display text-lg sm:text-xl leading-loose">
   {config.skills.title}
 </h2>
 <ul class="my-8 flex flex-col gap-6">
   {
-    config.skills.groups.map((group, index) => (
+    config.skills.groups.map((group) => (
       <li class="flex flex-col gap-3">
-        <h3 class="text-xl font-medium">{group.label}</h3>
+        <h3 class="flex items-center gap-3 text-xl font-medium">
+          <PixelIcon name={group.icon} scale={2} />
+          {group.label}
+        </h3>
         <ul class="flex flex-row flex-wrap gap-2">
           {group.items.map((item) => (
-            <li class:list={["zag-bg zag-text zag-transition border-2 border-zag-dark px-2 py-1 text-sm font-semibold dark:border-zag-light", shadows[index % shadows.length]]}>
+            <li
+              class="px-sparkle zag-bg zag-text zag-transition relative border-2 border-zag-dark px-2 py-1 text-sm font-semibold dark:border-zag-light"
+              style="--px-star: 2px"
+            >
+              <span class="px-stars" aria-hidden="true" />
               {item}
             </li>
           ))}
