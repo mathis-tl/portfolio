@@ -18,9 +18,8 @@ Mettre à jour ce fichier en fin de chaque session agent pour limiter la taille 
 | 05 Accessibilité | PR ouverte, revue OK | `cursor/brique-05-a11y-e4e0` | #7 | Clavier, focus, contraste |
 | 06 Netlify | PR ouverte, revue OK | `cursor/brique-06-netlify-e4e0` | #8 | baseUrl posé ensuite sur la brique 07 |
 | 07 Photo | PR #9, brouillon | `cursor/brique-07-photo-e4e0` | #9 | Portrait, compétences, site en ligne |
-| 08 Contact | PR ouverte, revue avec réserve | `cursor/brique-08-contact-e4e0` | #10 | E-mail et LinkedIn. CV PDF absent, pas de fusion |
+| 08 Contact | PR ouverte | `cursor/brique-08-contact-e4e0` | #10 | E-mail, LinkedIn et CV PDF |
 
 ## Prochaine session
 
-1. Ajouter `public/cv-mathis-telle.pdf` dès que le fichier local est fourni, puis le lien « CV (PDF) ».
-2. Fusionner la pile dans `main` après la revue de la brique 08, sans squash.
+1. Revue de la brique 08 avec le CV, puis fusion de la pile dans `main` sans squash.

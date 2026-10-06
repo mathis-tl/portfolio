@@ -177,6 +177,11 @@ const configuration = defineCollection({
        * The LinkedIn profile URL of the site owner or author.
        */
       linkedinProfile: z.url().optional(),
+
+      /**
+       * Chemin local du CV PDF, servi depuis public/.
+       */
+      cvUrl: z.string().startsWith("/").optional(),
     }),
 
     /**

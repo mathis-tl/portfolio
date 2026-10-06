@@ -71,6 +71,17 @@ const year = date.getFullYear();
           )
         }
         {
+          config.personal.cvUrl && (
+            <Anchor
+              url={config.personal.cvUrl}
+              external
+              aria-label="CV de Mathis Telle au format PDF"
+            >
+              CV (PDF)
+            </Anchor>
+          )
+        }
+        {
           config.personal.githubProfile && (
             <Anchor
               url={config.personal.githubProfile}

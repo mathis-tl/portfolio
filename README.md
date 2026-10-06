@@ -39,7 +39,7 @@ Le site Netlify existant est `portfolio-mathistelle` (https://portfolio-mathiste
 
 ## Contact
 
-Le pied de page et le menu exposent l'e-mail `tellemathis@gmail.com` et le profil LinkedIn. Pas de formulaire. Le CV PDF n'est pas dans le dépôt : le fichier `~/Downloads/Mathis Telle.pdf` n'était pas disponible dans l'environnement de travail. Le numéro de téléphone ne figure pas dans les pages.
+Le pied de page et le menu exposent l'e-mail `tellemathis@gmail.com`, le profil LinkedIn et le lien « CV (PDF) » vers `public/cv-mathis-telle.pdf` (fichier fourni par Mathis Telle). Pas de formulaire. Le numéro de téléphone reste uniquement dans ce PDF.
 
 ## Crédits
 
