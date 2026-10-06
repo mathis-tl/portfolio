@@ -2,8 +2,7 @@
 # we need to prefix all configuration keys with an underscore.
 
 [_.site]
-# temporaire, le domaine Netlify sera posé en brique 06
-baseUrl = "http://localhost:4321"
+baseUrl = "https://portfolio-mathistelle.netlify.app"
 
 [_.globalMeta]
 title = "Mathis Telle"
