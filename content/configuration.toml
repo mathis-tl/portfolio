@@ -40,14 +40,14 @@ noProjects = "Aucun projet."
 [_.about]
 title = "À propos"
 paragraphs = [
-  "Ingénieur informatique (Université Paris-Saclay, ISTY), orienté data. J'aime construire des traitements de données que l'on peut vérifier, rejouer et expliquer.",
-  "Mon fil conducteur : des systèmes testés, qui signalent leurs cas douteux plutôt que de les masquer. Je cherche un premier CDI en data engineering, à Paris ou en Île-de-France.",
+  "Ingénieur informatique (Université Paris-Saclay, ISTY), orienté data. J'intègre l'IA au quotidien, de façon réfléchie, dans mon travail comme dans mes projets : elle m'aide à aller plus vite, pas à ne plus comprendre ce que je livre.",
+  "Je préfère un résultat simple dont je sais répondre à un résultat impressionnant dont je ne sais pas expliquer les failles. Je cherche un premier CDI en data engineering, à Paris ou en Île-de-France.",
 ]
 interestsLabel = "Ce que j'aime"
 interests = [
-  { label = "Technologie et espace", icon = "rocket" },
+  { label = "Technologie et espace (l'espace, pas la barre d'espace)", icon = "rocket" },
   { label = "Football, pratiqué pendant 8 ans", icon = "ball" },
-  { label = "Guitare, 5 ans de pratique", icon = "guitar" },
+  { label = "Guitare, 5 ans de pratique (ça remonte un peu, mais je l'ai fait)", icon = "guitar" },
   { label = "Randonnée et bivouac", icon = "mountain" },
 ]
 

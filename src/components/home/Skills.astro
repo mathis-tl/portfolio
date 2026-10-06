@@ -6,7 +6,7 @@ const { data: config } = await getConfigurationCollection();
 ---
 
 <h2 class="font-display text-lg sm:text-xl leading-loose">
-  {config.skills.title}
+  <span class="px-name box-decoration-clone">{config.skills.title}</span>
 </h2>
 <ul class="my-8 flex flex-col gap-6">
   {
@@ -19,7 +19,7 @@ const { data: config } = await getConfigurationCollection();
         <ul class="flex flex-row flex-wrap gap-x-2 gap-y-5">
           {group.items.map((item) => (
             <li
-              class="px-sparkle zag-bg zag-text zag-transition relative border-2 border-zag-dark px-2 py-1 text-sm font-semibold dark:border-zag-light"
+              class="px-sparkle px-chip zag-bg zag-text zag-transition relative border-2 border-zag-dark px-2 py-1 text-sm font-semibold dark:border-zag-light"
               style="--px-star: 3px"
             >
               <span class="px-stars" aria-hidden="true" />
