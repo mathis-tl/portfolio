@@ -6,8 +6,8 @@ baseUrl = "https://portfolio-mathistelle.netlify.app"
 
 [_.globalMeta]
 title = "Mathis Telle"
-description = "Data engineer, profil polyvalent. Premier CDI en data engineering, Paris et Île-de-France."
-longDescription = "Ingénieur informatique, Université Paris-Saclay (ISTY). Data engineer, profil polyvalent : pipelines de données, backend, sécurité, réseaux, outils front."
+description = "Ingénieur informatique orienté data. Premier CDI en data engineering, Paris et Île-de-France."
+longDescription = "Ingénieur informatique, Université Paris-Saclay (ISTY). Ingénieur informatique orienté data : pipelines de données, backend, sécurité, réseaux, outils front."
 keywords = ["data engineering", "Mathis Telle"]
 
 [_.projectMeta]
@@ -21,7 +21,7 @@ description = "Cette page n'existe pas."
 
 [_.hero]
 title = "Mathis Telle"
-subtitle = "Data engineer, profil polyvalent<br />Université Paris-Saclay (ISTY)"
+subtitle = "Ingénieur informatique orienté data<br />Université Paris-Saclay (ISTY)"
 ctaText = "Voir les projets"
 ctaUrl = "/projects"
 
@@ -36,6 +36,15 @@ cvUrl = "/cv-mathis-telle.pdf"
 projectsName = "Projets"
 viewAll = "Voir tout"
 noProjects = "Aucun projet."
+
+[_.about]
+title = "À propos"
+paragraphs = [
+  "Ingénieur informatique (Université Paris-Saclay, ISTY), orienté data. J'aime construire des traitements de données que l'on peut vérifier, rejouer et expliquer.",
+  "Mon fil conducteur : des systèmes testés, qui signalent leurs cas douteux plutôt que de les masquer. Je cherche un premier CDI en data engineering, à Paris ou en Île-de-France.",
+]
+interestsLabel = "Ce que j'aime"
+interests = ["Technologie et espace", "Football, pratiqué pendant 8 ans", "Guitare, 5 ans de pratique", "Randonnée et bivouac"]
 
 [_.skills]
 title = "Compétences"

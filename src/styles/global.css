@@ -22,6 +22,11 @@
   --color-zag-light-opaque: oklch(from var(--color-neutral-100) l c h / 0.5);
   --color-zag-dark-muted: var(--color-neutral-600);
   --color-zag-light-muted: var(--color-neutral-400);
+  --color-px-green: var(--px-green);
+  --color-px-red: var(--px-red);
+  --color-px-blue: var(--px-blue);
+  --color-px-purple: var(--px-purple);
+  --color-px-yellow: var(--px-yellow);
 }
 
 @layer base {
@@ -190,5 +195,21 @@
       var(--color-zag-dark) 50%,
       var(--color-zag-dark-opaque) 100%
     );
+  }
+}
+
+@layer components {
+  .px-dots {
+    background-image: radial-gradient(
+      color-mix(in srgb, var(--color-zag-dark) 22%, transparent) 1.5px,
+      transparent 1.5px
+    );
+    background-size: 16px 16px;
+    &:where(.dark, .dark *) {
+      background-image: radial-gradient(
+        color-mix(in srgb, var(--color-zag-light) 22%, transparent) 1.5px,
+        transparent 1.5px
+      );
+    }
   }
 }

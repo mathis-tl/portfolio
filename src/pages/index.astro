@@ -1,6 +1,8 @@
 ---
 import { getCollection } from "astro:content";
+import PixelDivider from "../components/PixelDivider.astro";
 import Section from "../components/common/Section.astro";
+import About from "../components/home/About.astro";
 import FeaturedProjects from "../components/home/FeaturedProjects.astro";
 import Hero from "../components/home/Hero.astro";
 import Skills from "../components/home/Skills.astro";
@@ -54,9 +56,15 @@ const featuredProjects = (
   <Section class="my-16">
     <Hero />
   </Section>
+  <PixelDivider />
+  <Section>
+    <About />
+  </Section>
+  <PixelDivider />
   <Section>
     <FeaturedProjects featuredProjects={featuredProjects} />
   </Section>
+  <PixelDivider />
   <Section>
     <Skills />
   </Section>
