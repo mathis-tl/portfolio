@@ -7,7 +7,7 @@ baseUrl = "https://portfolio-mathistelle.netlify.app"
 [_.globalMeta]
 title = "Mathis Telle"
 description = "Ingénieur informatique orienté data. Premier CDI en data engineering, Paris et Île-de-France."
-longDescription = "Ingénieur informatique, Université Paris-Saclay (ISTY). Ingénieur informatique orienté data : pipelines de données, backend, sécurité, réseaux, outils front."
+longDescription = "Ingénieur informatique, Université Paris-Saclay (ISTY), orienté data : pipelines de données, backend, sécurité, réseaux, outils front."
 keywords = ["data engineering", "Mathis Telle"]
 
 [_.projectMeta]
