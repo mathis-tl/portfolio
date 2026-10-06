@@ -1,17 +1,11 @@
 ---
-import { getImage, Image } from "astro:assets";
+import { Image } from "astro:assets";
 import photo from "../../assets/photo.png";
+import pixelPhoto from "../../assets/photo-pixel.png";
 import { getConfigurationCollection } from "../../lib/utils";
 import Anchor from "../common/Anchor.astro";
 
 const { data: config } = await getConfigurationCollection();
-const pixelPhoto = await getImage({
-  src: photo,
-  width: 48,
-  height: 48,
-  position: "top",
-  format: "png",
-});
 ---
 
 <div class="px-dots flex flex-col items-center sm:flex-row gap-8 p-6 sm:p-8">
