@@ -59,6 +59,7 @@ const { data: config } = await getConfigurationCollection();
               githubUrl={project.data.githubUrl}
               liveUrl={project.data.liveDemoUrl}
               tags={project.data.tags ?? []}
+              icon={project.data.icon}
             />
           </li>
         ))

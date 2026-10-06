@@ -44,17 +44,22 @@ paragraphs = [
   "Mon fil conducteur : des systèmes testés, qui signalent leurs cas douteux plutôt que de les masquer. Je cherche un premier CDI en data engineering, à Paris ou en Île-de-France.",
 ]
 interestsLabel = "Ce que j'aime"
-interests = ["Technologie et espace", "Football, pratiqué pendant 8 ans", "Guitare, 5 ans de pratique", "Randonnée et bivouac"]
+interests = [
+  { label = "Technologie et espace", icon = "rocket" },
+  { label = "Football, pratiqué pendant 8 ans", icon = "ball" },
+  { label = "Guitare, 5 ans de pratique", icon = "guitar" },
+  { label = "Randonnée et bivouac", icon = "mountain" },
+]
 
 [_.skills]
 title = "Compétences"
 groups = [
-  { label = "Données", items = ["SQL", "Prefect", "dbt", "DuckDB", "Supabase", "Airtable", "ETL/ELT", "Parquet", "GitHub Actions", "Google Sheets"] },
-  { label = "Langages", items = ["Python", "JavaScript", "TypeScript", "Java", "C", "C++", "R"] },
-  { label = "Qualité et fiabilité", items = ["Tests unitaires et non-régression", "Validation des données", "Scoring explicable", "Revue humaine des cas douteux", "Benchmarks"] },
-  { label = "IA", items = ["API OpenAI", "LLM avec garde-fous déterministes"] },
-  { label = "Backend, réseaux et sécurité", items = ["Flask", "MQTT", "ITS-G5", "PKI (CRL, OCSP)", "Docker Compose"] },
-  { label = "Front et outils", items = ["Astro", "React", "Node.js", "Tailwind CSS", "Retool", "Netlify", "Git", "Docker"] },
+  { label = "Données", icon = "database", items = ["SQL", "Prefect", "dbt", "DuckDB", "Supabase", "Airtable", "ETL/ELT", "Parquet", "GitHub Actions", "Google Sheets"] },
+  { label = "Langages", icon = "code", items = ["Python", "JavaScript", "TypeScript", "Java", "C", "C++", "R"] },
+  { label = "Qualité et fiabilité", icon = "check", items = ["Tests unitaires et non-régression", "Validation des données", "Scoring explicable", "Revue humaine des cas douteux", "Benchmarks"] },
+  { label = "IA", icon = "chip", items = ["API OpenAI", "LLM avec garde-fous déterministes"] },
+  { label = "Backend, réseaux et sécurité", icon = "server", items = ["Flask", "MQTT", "ITS-G5", "PKI (CRL, OCSP)", "Docker Compose"] },
+  { label = "Front et outils", icon = "screen", items = ["Astro", "React", "Node.js", "Tailwind CSS", "Retool", "Netlify", "Git", "Docker"] },
 ]
 
 [_.menu]

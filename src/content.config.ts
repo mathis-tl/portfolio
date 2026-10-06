@@ -2,6 +2,7 @@ import { defineCollection } from "astro:content";
 import { file, glob } from "astro/loaders";
 import { z } from "astro/zod";
 import { parse as parseToml } from "toml";
+import { pixelIconNames } from "./lib/pixel-icons";
 
 /**
  * Loader and schema for the configuration collection.
@@ -143,7 +144,9 @@ const configuration = defineCollection({
       title: z.string(),
       paragraphs: z.array(z.string()),
       interestsLabel: z.string(),
-      interests: z.array(z.string()),
+      interests: z.array(
+        z.object({ label: z.string(), icon: z.enum(pixelIconNames) }),
+      ),
     }),
 
     /**
@@ -154,6 +157,7 @@ const configuration = defineCollection({
       groups: z.array(
         z.object({
           label: z.string(),
+          icon: z.enum(pixelIconNames),
           items: z.array(z.string()),
         }),
       ),
@@ -286,6 +290,11 @@ const project = defineCollection({
        * Display order on the projects page and the homepage, ascending.
        */
       order: z.number(),
+
+      /**
+       * Pixel icon displayed next to the project title.
+       */
+      icon: z.enum(pixelIconNames).optional(),
 
       /**
        * Whether the project is featured on the homepage.

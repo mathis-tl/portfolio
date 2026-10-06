@@ -22,11 +22,6 @@
   --color-zag-light-opaque: oklch(from var(--color-neutral-100) l c h / 0.5);
   --color-zag-dark-muted: var(--color-neutral-600);
   --color-zag-light-muted: var(--color-neutral-400);
-  --color-px-green: var(--px-green);
-  --color-px-red: var(--px-red);
-  --color-px-blue: var(--px-blue);
-  --color-px-purple: var(--px-purple);
-  --color-px-yellow: var(--px-yellow);
 }
 
 @layer base {
@@ -210,6 +205,90 @@
         color-mix(in srgb, var(--color-zag-light) 22%, transparent) 1.5px,
         transparent 1.5px
       );
+    }
+  }
+
+  .px-stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .px-stars::before,
+  .px-stars::after {
+    content: "";
+    position: absolute;
+    width: var(--px-star, 4px);
+    height: var(--px-star, 4px);
+    background: currentColor;
+    box-shadow:
+      var(--px-star, 4px) 0 currentColor,
+      calc(var(--px-star, 4px) * -1) 0 currentColor,
+      0 var(--px-star, 4px) currentColor,
+      0 calc(var(--px-star, 4px) * -1) currentColor;
+    opacity: 0;
+  }
+
+  .px-stars::before {
+    top: -2px;
+    right: 6px;
+  }
+
+  .px-stars::after {
+    bottom: -2px;
+    left: 10px;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .px-sparkle:hover,
+    .px-sparkle:focus-within {
+      outline: 2px dashed currentColor;
+      outline-offset: 4px;
+    }
+
+    .px-sparkle:hover .px-stars::before,
+    .px-sparkle:hover .px-stars::after,
+    .px-sparkle:focus-within .px-stars::before,
+    .px-sparkle:focus-within .px-stars::after {
+      opacity: 1;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .px-sparkle:hover,
+      .px-sparkle:focus-within {
+        animation: px-flicker 1.2s steps(1, end) infinite;
+      }
+
+      .px-sparkle:hover .px-stars::before,
+      .px-sparkle:focus-within .px-stars::before {
+        animation: px-twinkle 0.8s steps(1, end) infinite;
+      }
+
+      .px-sparkle:hover .px-stars::after,
+      .px-sparkle:focus-within .px-stars::after {
+        animation: px-twinkle 0.8s steps(1, end) 0.4s infinite;
+      }
+    }
+  }
+
+  @keyframes px-twinkle {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes px-flicker {
+    0% {
+      outline-color: currentColor;
+    }
+    60% {
+      outline-color: transparent;
+    }
+    80% {
+      outline-color: currentColor;
     }
   }
 }

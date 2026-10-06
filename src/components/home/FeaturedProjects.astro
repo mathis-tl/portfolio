@@ -13,7 +13,7 @@ const { data: config } = await getConfigurationCollection();
 ---
 
 <div class="flex justify-between items-center w-full">
-  <h2 class="font-display text-lg sm:text-xl leading-loose text-px-green">{config.texts.projectsName}</h2>
+  <h2 class="font-display text-lg sm:text-xl leading-loose">{config.texts.projectsName}</h2>
   <Anchor url="/projects" class="text-base">{config.texts.viewAll}</Anchor>
 </div>
 <ul class="my-8">
@@ -28,6 +28,7 @@ const { data: config } = await getConfigurationCollection();
             githubUrl={project.githubUrl}
             liveUrl={project.liveDemoUrl}
             tags={project.tags ?? []}
+            icon={project.icon}
           />
         </li>
       ))

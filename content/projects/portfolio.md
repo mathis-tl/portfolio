@@ -1,6 +1,7 @@
 ---
 title: Ce portfolio
 slug: portfolio
+icon: star
 description: "Site statique en Astro et Tailwind CSS : polices auto-hébergées, aucun script tiers, utilisable au clavier (WCAG 2.2 AA visé)."
 tags: ["Astro", "Tailwind CSS", "TypeScript", "Biome", "Netlify"]
 githubUrl: https://github.com/mathis-tl/portfolio
