@@ -27,6 +27,11 @@
 @layer base {
   :root {
     --px-green: #0b6b32;
+    --px-yellow-hl: #ffde21;
+    --px-gb-1: #0f380f;
+    --px-gb-2: #306230;
+    --px-gb-3: #c4162a;
+    --px-gb-4: #1d4ed8;
     --zag-stroke: 2px;
     --zag-offset: 6px;
     --zag-transition-duration: 0.15s;
@@ -35,6 +40,10 @@
 
   :root.dark {
     --px-green: #5eeb9a;
+    --px-gb-1: #9bbc0f;
+    --px-gb-2: #8bac0f;
+    --px-gb-3: #ff5d73;
+    --px-gb-4: #5db4ff;
   }
 
   ::selection {
@@ -117,6 +126,12 @@
     &:where(.dark, .dark *) {
       border-color: var(--color-zag-light);
     }
+  }
+
+  .px-name:hover,
+  .px-name:focus-visible {
+    background-color: var(--px-yellow-hl);
+    color: var(--color-zag-dark);
   }
 
   .zag-offset {
@@ -222,13 +237,13 @@
   }
 
   .px-stars::before {
-    top: -2px;
-    right: 6px;
+    top: calc(var(--px-star, 4px) * -2 - 8px);
+    right: 14px;
   }
 
   .px-stars::after {
-    bottom: -2px;
-    left: 10px;
+    bottom: calc(var(--px-star, 4px) * -2 - 8px);
+    left: 18px;
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -248,17 +263,21 @@
     @media (prefers-reduced-motion: no-preference) {
       .px-sparkle:hover,
       .px-sparkle:focus-within {
-        animation: px-flicker 1.2s steps(1, end) 4;
+        animation: px-gb-outline 2s steps(1, end) infinite;
       }
 
       .px-sparkle:hover .px-stars::before,
       .px-sparkle:focus-within .px-stars::before {
-        animation: px-twinkle 0.8s steps(1, end) 4;
+        animation:
+          px-twinkle 0.8s steps(1, end) infinite,
+          px-gb-cycle 2s steps(1, end) infinite;
       }
 
       .px-sparkle:hover .px-stars::after,
       .px-sparkle:focus-within .px-stars::after {
-        animation: px-twinkle 0.8s steps(1, end) 0.4s 4;
+        animation:
+          px-twinkle 0.8s steps(1, end) 0.4s infinite,
+          px-gb-cycle 2s steps(1, end) 0.5s infinite;
       }
     }
   }
@@ -272,15 +291,53 @@
     }
   }
 
-  @keyframes px-flicker {
+  @keyframes px-gb-cycle {
     0% {
-      outline-color: currentColor;
+      background-color: var(--px-gb-1);
+      box-shadow:
+        var(--px-star, 4px) 0 var(--px-gb-1),
+        calc(var(--px-star, 4px) * -1) 0 var(--px-gb-1),
+        0 var(--px-star, 4px) var(--px-gb-1),
+        0 calc(var(--px-star, 4px) * -1) var(--px-gb-1);
     }
-    60% {
-      outline-color: transparent;
+    25% {
+      background-color: var(--px-gb-2);
+      box-shadow:
+        var(--px-star, 4px) 0 var(--px-gb-2),
+        calc(var(--px-star, 4px) * -1) 0 var(--px-gb-2),
+        0 var(--px-star, 4px) var(--px-gb-2),
+        0 calc(var(--px-star, 4px) * -1) var(--px-gb-2);
     }
-    80% {
-      outline-color: currentColor;
+    50% {
+      background-color: var(--px-gb-3);
+      box-shadow:
+        var(--px-star, 4px) 0 var(--px-gb-3),
+        calc(var(--px-star, 4px) * -1) 0 var(--px-gb-3),
+        0 var(--px-star, 4px) var(--px-gb-3),
+        0 calc(var(--px-star, 4px) * -1) var(--px-gb-3);
+    }
+    75% {
+      background-color: var(--px-gb-4);
+      box-shadow:
+        var(--px-star, 4px) 0 var(--px-gb-4),
+        calc(var(--px-star, 4px) * -1) 0 var(--px-gb-4),
+        0 var(--px-star, 4px) var(--px-gb-4),
+        0 calc(var(--px-star, 4px) * -1) var(--px-gb-4);
+    }
+  }
+
+  @keyframes px-gb-outline {
+    0% {
+      outline-color: var(--px-gb-1);
+    }
+    25% {
+      outline-color: var(--px-gb-2);
+    }
+    50% {
+      outline-color: var(--px-gb-3);
+    }
+    75% {
+      outline-color: var(--px-gb-4);
     }
   }
 }

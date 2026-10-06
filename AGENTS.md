@@ -16,7 +16,7 @@ Public : recruteurs tech et leads data qui lisent le site en 30 secondes.
 3. Textes en français. Pas d'emoji. Pas de tiret cadratin. Écrire "Université Paris-Saclay (ISTY)". Ne jamais écrire "étudiant". Ne jamais publier de numéro de téléphone.
 4. Accessibilité WCAG 2.2 AA : contraste 4.5:1 minimum, focus visible, tout est utilisable au clavier, HTML sémantique, lang="fr", prefers-reduced-motion respecté, pas de texte justifié.
 5. Press Start 2P réservée aux titres et badges courts, jamais aux paragraphes.
-6. Couleurs uniquement via les tokens de src/styles/global.css (--px-green, utilisé pour la sélection de texte, et les neutres zag ; pas de couleur d'accent ailleurs). Aucune couleur en dur dans les composants.
+6. Couleurs uniquement via les tokens de src/styles/global.css (--px-green pour la sélection de texte, --px-yellow-hl #FFDE21 pour le surlignage du nom dans le header, --px-gb-1 à --px-gb-4 pour le scintillement au survol, et les neutres zag ; pas de couleur d'accent ailleurs). Aucune couleur en dur dans les composants.
 7. Simplicité : pas d'abstraction pour un usage unique, pas de dépendance si quelques lignes suffisent. Toute nouvelle dépendance est justifiée dans la PR.
 8. Images locales dans src/assets, rendues avec astro:assets, alt en français obligatoire.
 9. Ne jamais inventer de contenu. Tout chiffre doit venir d'une source citée dans la PR (CV, README d'un dépôt mathis-tl). Si une info manque, le signaler dans la PR, jamais dans le site.
