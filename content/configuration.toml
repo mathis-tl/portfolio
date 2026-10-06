@@ -62,6 +62,17 @@ groups = [
   { label = "Front et outils", icon = "screen", items = ["Astro", "React", "Node.js", "Tailwind CSS", "Retool", "Netlify", "Git", "Docker"] },
 ]
 
+[_.lighthouse]
+title = "Performances du site"
+intro = "Scores Lighthouse mesurés sur le site en ligne le 6 octobre 2026. Les deux scores de performance sur mobile sont les moins bons : je les ai mesurés une seule fois et ne sais pas encore s'il s'agit d'un défaut réel ou d'un bruit de mesure."
+labels = ["Performance", "Accessibilité", "Bonnes pratiques", "SEO"]
+rows = [
+  { label = "Accueil, ordinateur", scores = [100, 100, 100, 100] },
+  { label = "Accueil, mobile", scores = [87, 100, 100, 100] },
+  { label = "Projets, ordinateur", scores = [100, 100, 100, 100] },
+  { label = "Projets, mobile", scores = [75, 100, 100, 100] },
+]
+
 [_.menu]
 home = "/"
 projects = "/projects"

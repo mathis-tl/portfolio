@@ -1,0 +1,42 @@
+---
+import { getConfigurationCollection } from "../../lib/utils";
+
+const { data: config } = await getConfigurationCollection();
+const { lighthouse } = config;
+---
+
+<h2 class="font-display text-lg sm:text-xl leading-loose">
+  <span class="px-name box-decoration-clone">{lighthouse.title}</span>
+</h2>
+<p class="mt-4">{lighthouse.intro}</p>
+<div class="my-8 overflow-x-auto">
+  <table class="w-full border-collapse text-sm">
+    <caption class="sr-only">Scores Lighthouse sur 100</caption>
+    <thead>
+      <tr>
+        <th scope="col" class="p-2 text-left font-medium">Page</th>
+        {
+          lighthouse.labels.map((label) => (
+            <th scope="col" class="p-2 text-center font-medium">
+              {label}
+            </th>
+          ))
+        }
+      </tr>
+    </thead>
+    <tbody>
+      {
+        lighthouse.rows.map((row) => (
+          <tr class="border-t-2 border-zag-dark dark:border-zag-light">
+            <th scope="row" class="p-2 text-left font-medium">
+              {row.label}
+            </th>
+            {row.scores.map((score) => (
+              <td class="p-2 text-center font-display text-base">{score}</td>
+            ))}
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>
