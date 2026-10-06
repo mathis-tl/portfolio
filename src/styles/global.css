@@ -263,7 +263,7 @@
     @media (prefers-reduced-motion: no-preference) {
       .px-sparkle:hover,
       .px-sparkle:focus-within {
-        animation: px-gb-outline 2s steps(1, end) infinite;
+        animation: px-flicker 1.2s steps(1, end) 4;
       }
 
       .px-sparkle:hover .px-stars::before,
@@ -326,18 +326,15 @@
     }
   }
 
-  @keyframes px-gb-outline {
+  @keyframes px-flicker {
     0% {
-      outline-color: var(--px-gb-1);
+      outline-color: currentColor;
     }
-    25% {
-      outline-color: var(--px-gb-2);
+    60% {
+      outline-color: transparent;
     }
-    50% {
-      outline-color: var(--px-gb-3);
-    }
-    75% {
-      outline-color: var(--px-gb-4);
+    80% {
+      outline-color: currentColor;
     }
   }
 }
