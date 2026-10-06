@@ -1,46 +1,83 @@
-# Portfolio Mathis Telle
+# Portfolio de Mathis Telle
 
-Site portfolio statique d'ingénieur informatique, en cours de refonte à partir du thème Astro [Zaggonaut](https://github.com/RATIU5/zaggonaut) (MIT).
+[![CI](https://github.com/mathis-tl/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/mathis-tl/portfolio/actions/workflows/ci.yml)
+![Astro](https://img.shields.io/badge/Astro-7-BC52EE?logo=astro&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)
+![Lighthouse](https://img.shields.io/badge/Lighthouse_ordinateur-100-brightgreen)
+[![Licence MIT](https://img.shields.io/badge/licence-MIT-lightgrey)](LICENSE.md)
 
-## Prérequis
+Mon portfolio : ingénieur informatique orienté data (Université Paris-Saclay, ISTY), à la recherche d'un premier CDI en data engineering à Paris ou en Île-de-France.
 
-- Node.js 22 (voir `.nvmrc`)
-- [pnpm](https://pnpm.io/) 10
+**En ligne : <https://portfolio-mathistelle.netlify.app>**
 
-## Commandes
+![Page d'accueil](docs/accueil.png)
+
+## Ce que contient le site
+
+- Une page d'accueil : présentation, À propos, projets mis en avant, compétences par thème, scores de performance.
+- Une page Projets avec une fiche par projet (stage Willy Anti-Gaspi, pipeline de la Coupe du Monde 2026, panyen, PKI et ITS-G5, etc.).
+- Un rendu rétro volontaire : polices pixel, photo en pixel art (la vraie photo au survol), petits pictos dessinés à la main en SVG, étoiles et cadres animés en CSS.
+- Mode clair et sombre.
+
+![Page Projets](docs/projets.png)
+
+## Choix techniques
+
+- **Statique et léger** : Astro 7, aucun backend, aucun formulaire, aucun script tiers, aucune analytique. Les polices sont auto-hébergées (Fontsource).
+- **Peu de JavaScript** : uniquement le thème clair/sombre et le menu mobile. Tous les effets visuels sont du CSS.
+- **Accessibilité** : viser WCAG 2.2 AA (contrastes, navigation au clavier, focus visible, `prefers-reduced-motion` respecté, effets au survol limités aux appareils à souris).
+- **Contenu séparé du code** : textes et projets dans `content/` (TOML et Markdown), validés par un schéma Zod.
+- **Couleurs via des tokens** définis dans `src/styles/global.css`, jamais en dur dans les composants.
+
+## Performances
+
+Scores Lighthouse mesurés sur le site en ligne le 6 octobre 2026 :
+
+| Page | Performance | Accessibilité | Bonnes pratiques | SEO |
+| --- | :-: | :-: | :-: | :-: |
+| Accueil, ordinateur | 100 | 100 | 100 | 100 |
+| Accueil, mobile | 87 | 100 | 100 | 100 |
+| Projets, ordinateur | 100 | 100 | 100 | 100 |
+| Projets, mobile | 75 | 100 | 100 | 100 |
+
+Le score de performance sur mobile est le point à surveiller : une seule mesure pour l'instant, avec la limitation de processeur que Lighthouse applique.
+
+## Lancer le projet
+
+Prérequis : Node.js 22 (voir `.nvmrc`) et [pnpm](https://pnpm.io/) 10.
 
 ```bash
 pnpm install
-pnpm dev          # développement local
-pnpm build        # build de production dans dist/
-pnpm preview      # prévisualisation du build
-pnpm lint         # Biome (vérification)
-pnpm lint:fix     # Biome (corrections automatiques)
-pnpm format       # Biome (formatage)
-pnpm check        # astro check
-pnpm ci           # Biome CI
+pnpm dev        # serveur de développement
+pnpm build      # build de production dans dist/
+pnpm preview    # prévisualiser le build
+pnpm lint       # Biome
+pnpm check      # astro check (TypeScript)
 ```
 
 ## Structure
 
-- `src/pages/` : routes Astro
-- `src/components/` : composants
-- `src/layouts/` : gabarits de page
-- `src/styles/` : styles globaux (Tailwind 4)
-- `content/` : contenu (projets, configuration TOML)
-- `public/` : fichiers statiques
-- `AGENTS.md` : règles du projet pour les agents Cursor
+```text
+content/          textes (configuration.toml) et fiches projets (Markdown)
+public/           fichiers statiques (CV PDF, icônes)
+src/
+  assets/         images (photo, photo en pixel art)
+  components/     composants Astro (accueil, en-tête, pictos pixel)
+  layouts/        gabarits de page
+  lib/            pictos pixel et utilitaires
+  pages/          routes
+  styles/         styles globaux et tokens (Tailwind 4)
+```
 
-## Mise en ligne
+## Déploiement
 
-Le site Netlify existant est `portfolio-mathistelle` (https://portfolio-mathistelle.netlify.app). `baseUrl` dans `content/configuration.toml` pointe dessus.
-
-`netlify.toml` est prêt : `pnpm build`, dossier `dist/`, Node 22, en-têtes de sécurité. Pas de formulaire, pas d'analytique.
+Le site est hébergé sur Netlify (`netlify.toml` : `pnpm build`, dossier `dist/`, Node 22, en-têtes de sécurité). La CI GitHub lance Biome, `astro check` et le build sur chaque PR.
 
 ## Contact
 
-Le pied de page et le menu exposent l'e-mail `tellemathis@gmail.com`, le profil LinkedIn et le lien « CV (PDF) » vers `public/cv-mathis-telle.pdf` (fichier fourni par Mathis Telle). Pas de formulaire. Le numéro de téléphone reste uniquement dans ce PDF.
+[LinkedIn](https://www.linkedin.com/in/mathis-telle-40a572260) · [GitHub](https://github.com/mathis-tl) · tellemathis@gmail.com
 
-## Crédits
+## Crédits et licence
 
-Basé sur le thème [Zaggonaut](https://github.com/RATIU5/zaggonaut) de RATIU5 (MIT).
+Basé sur le thème [Zaggonaut](https://github.com/RATIU5/zaggonaut) de RATIU5, très adapté. Code sous licence MIT (voir [LICENSE.md](LICENSE.md)). Les textes, la photo et les contenus des projets restent ma propriété.
