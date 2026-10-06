@@ -27,10 +27,14 @@
 @layer base {
   :root {
     --px-green: #0b6b32;
-    --px-red: #b42318;
-    --px-blue: #175cd3;
-    --px-purple: #6927da;
-    --px-yellow: #854f0b;
+    --px-yellow-hl: #ffde21;
+    --px-gb-1: #0f380f;
+    --px-gb-2: #306230;
+    --px-gb-3: #c4162a;
+    --px-gb-4: #1d4ed8;
+    --px-gb-5: #9a6b00;
+    --px-gb-6: #6d28d9;
+    --px-gb-7: #e6b800;
     --zag-stroke: 2px;
     --zag-offset: 6px;
     --zag-transition-duration: 0.15s;
@@ -39,10 +43,13 @@
 
   :root.dark {
     --px-green: #5eeb9a;
-    --px-red: #ff9b94;
-    --px-blue: #84caff;
-    --px-purple: #d6bbfb;
-    --px-yellow: #fec84b;
+    --px-gb-1: #9bbc0f;
+    --px-gb-2: #8bac0f;
+    --px-gb-3: #ff5d73;
+    --px-gb-4: #5db4ff;
+    --px-gb-5: #ffde21;
+    --px-gb-6: #c4a1ff;
+    --px-gb-7: #ffee00;
   }
 
   ::selection {
@@ -127,6 +134,19 @@
     }
   }
 
+  .px-name:focus-visible {
+    background-color: var(--px-yellow-hl);
+    color: var(--color-zag-dark);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .px-name:hover,
+    .px-chip:hover {
+      background-color: var(--px-yellow-hl);
+      color: var(--color-zag-dark);
+    }
+  }
+
   .zag-offset {
     text-underline-offset: var(--zag-offset);
   }
@@ -190,5 +210,182 @@
       var(--color-zag-dark) 50%,
       var(--color-zag-dark-opaque) 100%
     );
+  }
+}
+
+@layer components {
+  .px-dots {
+    background-image: radial-gradient(
+      color-mix(in srgb, var(--color-zag-dark) 22%, transparent) 1.5px,
+      transparent 1.5px
+    );
+    background-size: 16px 16px;
+    &:where(.dark, .dark *) {
+      background-image: radial-gradient(
+        color-mix(in srgb, var(--color-zag-light) 22%, transparent) 1.5px,
+        transparent 1.5px
+      );
+    }
+  }
+
+  .px-stars {
+    --px-frame: 9px;
+    --px-dash: repeating-linear-gradient(
+      90deg,
+      currentColor 0 10px,
+      transparent 10px 22px
+    );
+    --px-dash-v: repeating-linear-gradient(
+      180deg,
+      currentColor 0 10px,
+      transparent 10px 22px
+    );
+    position: absolute;
+    inset: calc(var(--px-frame) * -1);
+    pointer-events: none;
+  }
+
+  .px-stars::before,
+  .px-stars::after {
+    content: "";
+    position: absolute;
+    width: var(--px-star, 4px);
+    height: var(--px-star, 4px);
+    background: currentColor;
+    box-shadow:
+      var(--px-star, 4px) 0 currentColor,
+      calc(var(--px-star, 4px) * -1) 0 currentColor,
+      0 var(--px-star, 4px) currentColor,
+      0 calc(var(--px-star, 4px) * -1) currentColor;
+    opacity: 0;
+  }
+
+  .px-stars::before {
+    top: calc(var(--px-star, 4px) * -2 - 10px + var(--px-frame));
+    right: calc(14px + var(--px-frame));
+  }
+
+  .px-stars::after {
+    bottom: calc(var(--px-star, 4px) * -2 - 10px + var(--px-frame));
+    left: calc(18px + var(--px-frame));
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .px-sparkle:hover .px-stars,
+    .px-sparkle:focus-within .px-stars {
+      background:
+        var(--px-dash) top left / 100% 3px no-repeat,
+        var(--px-dash) bottom left / 100% 3px no-repeat,
+        var(--px-dash-v) top left / 3px 100% no-repeat,
+        var(--px-dash-v) top right / 3px 100% no-repeat;
+    }
+
+    .px-sparkle:hover .px-stars::before,
+    .px-sparkle:hover .px-stars::after,
+    .px-sparkle:focus-within .px-stars::before,
+    .px-sparkle:focus-within .px-stars::after {
+      opacity: 1;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .px-sparkle:hover .px-stars,
+      .px-sparkle:focus-within .px-stars {
+        animation: px-flicker 1.2s steps(1, end) infinite;
+      }
+
+      .px-sparkle:hover .px-stars::before,
+      .px-sparkle:focus-within .px-stars::before {
+        animation:
+          px-twinkle 0.8s steps(1, end) infinite,
+          px-gb-cycle 3.5s steps(1, end) infinite;
+      }
+
+      .px-sparkle:hover .px-stars::after,
+      .px-sparkle:focus-within .px-stars::after {
+        animation:
+          px-twinkle 0.8s steps(1, end) 0.4s infinite,
+          px-gb-cycle 3.5s steps(1, end) 0.5s infinite;
+      }
+    }
+  }
+
+  @keyframes px-twinkle {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes px-gb-cycle {
+    0.0% {
+      background-color: var(--px-gb-1);
+      box-shadow:
+        var(--px-star, 4px) 0 var(--px-gb-1),
+        calc(var(--px-star, 4px) * -1) 0 var(--px-gb-1),
+        0 var(--px-star, 4px) var(--px-gb-1),
+        0 calc(var(--px-star, 4px) * -1) var(--px-gb-1);
+    }
+    14.29% {
+      background-color: var(--px-gb-2);
+      box-shadow:
+        var(--px-star, 4px) 0 var(--px-gb-2),
+        calc(var(--px-star, 4px) * -1) 0 var(--px-gb-2),
+        0 var(--px-star, 4px) var(--px-gb-2),
+        0 calc(var(--px-star, 4px) * -1) var(--px-gb-2);
+    }
+    28.57% {
+      background-color: var(--px-gb-3);
+      box-shadow:
+        var(--px-star, 4px) 0 var(--px-gb-3),
+        calc(var(--px-star, 4px) * -1) 0 var(--px-gb-3),
+        0 var(--px-star, 4px) var(--px-gb-3),
+        0 calc(var(--px-star, 4px) * -1) var(--px-gb-3);
+    }
+    42.86% {
+      background-color: var(--px-gb-4);
+      box-shadow:
+        var(--px-star, 4px) 0 var(--px-gb-4),
+        calc(var(--px-star, 4px) * -1) 0 var(--px-gb-4),
+        0 var(--px-star, 4px) var(--px-gb-4),
+        0 calc(var(--px-star, 4px) * -1) var(--px-gb-4);
+    }
+    57.14% {
+      background-color: var(--px-gb-5);
+      box-shadow:
+        var(--px-star, 4px) 0 var(--px-gb-5),
+        calc(var(--px-star, 4px) * -1) 0 var(--px-gb-5),
+        0 var(--px-star, 4px) var(--px-gb-5),
+        0 calc(var(--px-star, 4px) * -1) var(--px-gb-5);
+    }
+    71.43% {
+      background-color: var(--px-gb-6);
+      box-shadow:
+        var(--px-star, 4px) 0 var(--px-gb-6),
+        calc(var(--px-star, 4px) * -1) 0 var(--px-gb-6),
+        0 var(--px-star, 4px) var(--px-gb-6),
+        0 calc(var(--px-star, 4px) * -1) var(--px-gb-6);
+    }
+    85.71% {
+      background-color: var(--px-gb-7);
+      box-shadow:
+        var(--px-star, 4px) 0 var(--px-gb-7),
+        calc(var(--px-star, 4px) * -1) 0 var(--px-gb-7),
+        0 var(--px-star, 4px) var(--px-gb-7),
+        0 calc(var(--px-star, 4px) * -1) var(--px-gb-7);
+    }
+  }
+
+  @keyframes px-flicker {
+    0% {
+      color: currentColor;
+    }
+    60% {
+      color: transparent;
+    }
+    80% {
+      color: currentColor;
+    }
   }
 }

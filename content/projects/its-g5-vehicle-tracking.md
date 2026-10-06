@@ -1,6 +1,7 @@
 ---
 title: Suivi de véhicules ITS-G5
 slug: its-g5-vehicle-tracking
+icon: car
 description: "Suivi temps réel de véhicules V2V sur une carte interactive."
 tags: ["Python", "MQTT", "Flask"]
 githubUrl: https://github.com/mathis-tl/its-g5-vehicle-tracking

@@ -1,6 +1,7 @@
 ---
 title: panyen
 slug: panyen
+icon: chart
 description: "En cours. Différentiel d'évolution des prix Martinique / métropole. La publication est bloquée si un test qualité échoue."
 tags: ["Python", "dbt", "Insee"]
 githubUrl: https://github.com/mathis-tl/panyen

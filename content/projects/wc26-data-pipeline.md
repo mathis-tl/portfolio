@@ -1,6 +1,7 @@
 ---
 title: Coupe du Monde 2026
 slug: wc26-data-pipeline
+icon: ball
 description: "Pipeline ELT sur la Coupe du Monde 2026, ingestion quotidienne pendant le tournoi, dashboard en ligne."
 tags: ["Python", "dbt", "DuckDB", "Astro", "GitHub Actions"]
 githubUrl: https://github.com/mathis-tl/wc26-data-pipeline

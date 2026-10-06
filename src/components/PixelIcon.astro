@@ -1,0 +1,31 @@
+---
+import { type PixelIconName, pixelIcons } from "../lib/pixel-icons";
+
+type Props = { name: PixelIconName; scale?: number; class?: string };
+
+const { name, scale = 2, class: className } = Astro.props;
+const rows: readonly string[] = pixelIcons[name];
+const width = rows[0].length;
+const height = rows.length;
+
+const path = rows
+  .flatMap((row, y) =>
+    [...row.matchAll(/#+/g)].map(
+      (run) => `M${run.index} ${y}h${run[0].length}v1h-${run[0].length}z`,
+    ),
+  )
+  .join("");
+---
+
+<svg
+  class={className}
+  width={width * scale}
+  height={height * scale}
+  viewBox={`0 0 ${width} ${height}`}
+  shape-rendering="crispEdges"
+  fill="currentColor"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d={path}></path>
+</svg>

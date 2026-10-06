@@ -46,7 +46,7 @@ const { data: config } = await getConfigurationCollection();
   </Fragment>
   <Section class="py-4 my-8">
     <div class="flex items-center gap-4 pt-8 pb-16">
-      <h1 class="font-display text-3xl sm:text-4xl leading-loose">{config.texts.projectsName}</h1>
+      <h1 class="font-display text-3xl sm:text-4xl leading-loose"><span class="px-name box-decoration-clone">{config.texts.projectsName}</span></h1>
     </div>
     <ul>
       {
@@ -59,6 +59,7 @@ const { data: config } = await getConfigurationCollection();
               githubUrl={project.data.githubUrl}
               liveUrl={project.data.liveDemoUrl}
               tags={project.data.tags ?? []}
+              icon={project.data.icon}
             />
           </li>
         ))

@@ -1,6 +1,7 @@
 ---
 title: PKI orientée services
 slug: pki-soa-hsm
+icon: key
 description: "PKI avec Root CA, CA intermédiaire, CRL et OCSP, et un HSM simulé."
 tags: ["Python", "Flask", "Docker"]
 githubUrl: https://github.com/mathis-tl/pki-soa-hsm

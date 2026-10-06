@@ -1,5 +1,7 @@
 ---
+import type { PixelIconName } from "../lib/pixel-icons";
 import Anchor from "./common/Anchor.astro";
+import PixelIcon from "./PixelIcon.astro";
 
 export type Props = {
 	title: string;
@@ -8,16 +10,22 @@ export type Props = {
 	githubUrl?: string;
 	liveUrl?: string;
 	tags: string[];
+	icon?: PixelIconName;
 };
 
-const { title, description, url, githubUrl, liveUrl, tags } = Astro.props;
+const { title, description, url, githubUrl, liveUrl, tags, icon } =
+	Astro.props;
 ---
 
-<div class="relative flex flex-col gap-3 mb-8 hover-zag-dotted-grid">
+<div class="px-sparkle relative flex flex-col gap-3 mb-8 hover-zag-dotted-grid">
+  <span class="px-stars" aria-hidden="true" />
   <div class="flex flex-col gap-3 sm:flex-row sm:justify-between">
-    <Anchor url={url} class="text-xl">
-      {title}
-    </Anchor>
+    <div class="flex items-center gap-3">
+      {icon && <PixelIcon name={icon} scale={2} class="shrink-0" />}
+      <Anchor url={url} class="text-xl">
+        {title}
+      </Anchor>
+    </div>
     <div class="flex gap-2">
       {
         githubUrl ? (
