@@ -18,7 +18,7 @@ Mettre à jour ce fichier en fin de chaque session agent pour limiter la taille 
 | 05 Accessibilité | PR ouverte, revue OK | `cursor/brique-05-a11y-e4e0` | #7 | Clavier, focus, contraste |
 | 06 Netlify | PR ouverte, revue OK | `cursor/brique-06-netlify-e4e0` | #8 | baseUrl posé ensuite sur la brique 07 |
 | 07 Photo | PR #9, brouillon | `cursor/brique-07-photo-e4e0` | #9 | Portrait, compétences, site en ligne |
-| 08 Contact | En cours | `cursor/brique-08-contact-e4e0` | | E-mail et LinkedIn. CV PDF absent de l'environnement |
+| 08 Contact | PR ouverte, revue avec réserve | `cursor/brique-08-contact-e4e0` | #10 | E-mail et LinkedIn. CV PDF absent, pas de fusion |
 
 ## Prochaine session
 
