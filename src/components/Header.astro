@@ -47,6 +47,27 @@ const menuLabels = {
           (key) => <Anchor url={config.menu[key]}>{menuLabels[key]}</Anchor>,
         )
       }
+      {
+        config.personal.email && (
+          <Anchor
+            url={`mailto:${config.personal.email}`}
+            aria-label="Envoyer un e-mail à Mathis Telle"
+          >
+            E-mail
+          </Anchor>
+        )
+      }
+      {
+        config.personal.linkedinProfile && (
+          <Anchor
+            url={config.personal.linkedinProfile}
+            external
+            aria-label="Profil LinkedIn de Mathis Telle"
+          >
+            LinkedIn
+          </Anchor>
+        )
+      }
     </div>
     <div class="flex gap-4 justify-between px-4 sm:px-0">
       {

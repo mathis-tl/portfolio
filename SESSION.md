@@ -16,9 +16,11 @@ Mettre à jour ce fichier en fin de chaque session agent pour limiter la taille 
 | 03 Identité | PR ouverte, revue OK | `cursor/brique-03-identite-e4e0` | #5 | Pas de photo, pas de domaine |
 | 04 Projets | PR ouverte, revue OK | `cursor/brique-04-projets-e4e0` | #6 | Six fiches sourcées, blog retiré |
 | 05 Accessibilité | PR ouverte, revue OK | `cursor/brique-05-a11y-e4e0` | #7 | Clavier, focus, contraste |
-| 06 Netlify | PR ouverte, revue OK | `cursor/brique-06-netlify-e4e0` | #8 | Domaine réel absent, baseUrl inchangé |
+| 06 Netlify | PR ouverte, revue OK | `cursor/brique-06-netlify-e4e0` | #8 | baseUrl posé ensuite sur la brique 07 |
+| 07 Photo | PR #9, brouillon | `cursor/brique-07-photo-e4e0` | #9 | Portrait, compétences, site en ligne |
+| 08 Contact | En cours | `cursor/brique-08-contact-e4e0` | | E-mail et LinkedIn. CV PDF absent de l'environnement |
 
 ## Prochaine session
 
-1. Fusionner les PR dans l'ordre 01 à 06. Chaque PR a pour base la branche de la brique précédente, pas `main`, tant que la précédente n'est pas fusionnée.
-2. Créer le site Netlify sur ce dépôt, puis remplacer `baseUrl` par l'URL réelle.
+1. Ajouter `public/cv-mathis-telle.pdf` dès que le fichier local est fourni, puis le lien « CV (PDF) ».
+2. Fusionner la pile dans `main` après la revue de la brique 08, sans squash.

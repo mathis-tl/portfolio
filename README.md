@@ -37,6 +37,10 @@ Le site Netlify existant est `portfolio-mathistelle` (https://portfolio-mathiste
 
 `netlify.toml` est prêt : `pnpm build`, dossier `dist/`, Node 22, en-têtes de sécurité. Pas de formulaire, pas d'analytique.
 
+## Contact
+
+Le pied de page et le menu exposent l'e-mail `tellemathis@gmail.com` et le profil LinkedIn. Pas de formulaire. Le CV PDF n'est pas dans le dépôt : le fichier `~/Downloads/Mathis Telle.pdf` n'était pas disponible dans l'environnement de travail. Le numéro de téléphone ne figure pas dans les pages.
+
 ## Crédits
 
 Basé sur le thème [Zaggonaut](https://github.com/RATIU5/zaggonaut) de RATIU5 (MIT).

@@ -164,6 +164,11 @@ const configuration = defineCollection({
       githubProfile: z.url().optional(),
 
       /**
+       * Adresse e-mail publique, utilisée pour un lien mailto.
+       */
+      email: z.email().optional(),
+
+      /**
        * The Twitter profile URL of the site owner or author.
        */
       twitterProfile: z.url().optional(),
