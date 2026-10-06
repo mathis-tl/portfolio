@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import photo from "../../assets/photo.png";
-import pixelPhoto from "../../assets/photo-pixel.png";
+import pixelPhoto from "../../assets/photo-pixel-mathis.png";
 import { getConfigurationCollection } from "../../lib/utils";
 import Anchor from "../common/Anchor.astro";
 
@@ -51,7 +51,7 @@ const { data: config } = await getConfigurationCollection();
 <style>
   .pixel-layer {
     display: none;
-    image-rendering: pixelated;
+    image-rendering: auto;
   }
 
   @media (hover: hover) and (pointer: fine) {
