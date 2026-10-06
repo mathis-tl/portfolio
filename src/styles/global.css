@@ -27,10 +27,6 @@
 @layer base {
   :root {
     --px-green: #0b6b32;
-    --px-red: #b42318;
-    --px-blue: #175cd3;
-    --px-purple: #6927da;
-    --px-yellow: #854f0b;
     --zag-stroke: 2px;
     --zag-offset: 6px;
     --zag-transition-duration: 0.15s;
@@ -39,10 +35,6 @@
 
   :root.dark {
     --px-green: #5eeb9a;
-    --px-red: #ff9b94;
-    --px-blue: #84caff;
-    --px-purple: #d6bbfb;
-    --px-yellow: #fec84b;
   }
 
   ::selection {
@@ -256,17 +248,17 @@
     @media (prefers-reduced-motion: no-preference) {
       .px-sparkle:hover,
       .px-sparkle:focus-within {
-        animation: px-flicker 1.2s steps(1, end) infinite;
+        animation: px-flicker 1.2s steps(1, end) 4;
       }
 
       .px-sparkle:hover .px-stars::before,
       .px-sparkle:focus-within .px-stars::before {
-        animation: px-twinkle 0.8s steps(1, end) infinite;
+        animation: px-twinkle 0.8s steps(1, end) 4;
       }
 
       .px-sparkle:hover .px-stars::after,
       .px-sparkle:focus-within .px-stars::after {
-        animation: px-twinkle 0.8s steps(1, end) 0.4s infinite;
+        animation: px-twinkle 0.8s steps(1, end) 0.4s 4;
       }
     }
   }
