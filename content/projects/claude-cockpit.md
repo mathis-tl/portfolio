@@ -1,6 +1,7 @@
 ---
 title: Claude Cockpit
 slug: claude-cockpit
+icon: compass
 description: "Guide local-first des workflows Claude Code, application de bureau macOS."
 tags: ["TypeScript", "React", "Vite", "Tauri"]
 githubUrl: https://github.com/mathis-tl/claude-cockpit
