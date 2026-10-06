@@ -45,7 +45,7 @@ paragraphs = [
 ]
 interestsLabel = "Ce que j'aime"
 interests = [
-  { label = "Technologie et espace (l'espace, pas la barre d'espace)", icon = "rocket" },
+  { label = "Technologie et espace (l'espace, pas la barre d'espace) #fun #marrant", icon = "rocket" },
   { label = "Football, pratiqué pendant 8 ans", icon = "ball" },
   { label = "Guitare, 5 ans de pratique (ça remonte un peu, mais je l'ai fait)", icon = "guitar" },
   { label = "Randonnée et bivouac", icon = "mountain" },

@@ -229,8 +229,19 @@
   }
 
   .px-stars {
+    --px-frame: 9px;
+    --px-dash: repeating-linear-gradient(
+      90deg,
+      currentColor 0 10px,
+      transparent 10px 22px
+    );
+    --px-dash-v: repeating-linear-gradient(
+      180deg,
+      currentColor 0 10px,
+      transparent 10px 22px
+    );
     position: absolute;
-    inset: 0;
+    inset: calc(var(--px-frame) * -1);
     pointer-events: none;
   }
 
@@ -250,20 +261,23 @@
   }
 
   .px-stars::before {
-    top: calc(var(--px-star, 4px) * -2 - 10px);
-    right: 14px;
+    top: calc(var(--px-star, 4px) * -2 - 10px + var(--px-frame));
+    right: calc(14px + var(--px-frame));
   }
 
   .px-stars::after {
-    bottom: calc(var(--px-star, 4px) * -2 - 10px);
-    left: 18px;
+    bottom: calc(var(--px-star, 4px) * -2 - 10px + var(--px-frame));
+    left: calc(18px + var(--px-frame));
   }
 
   @media (hover: hover) and (pointer: fine) {
-    .px-sparkle:hover,
-    .px-sparkle:focus-within {
-      outline: 3px dashed currentColor;
-      outline-offset: 6px;
+    .px-sparkle:hover .px-stars,
+    .px-sparkle:focus-within .px-stars {
+      background:
+        var(--px-dash) top left / 100% 3px no-repeat,
+        var(--px-dash) bottom left / 100% 3px no-repeat,
+        var(--px-dash-v) top left / 3px 100% no-repeat,
+        var(--px-dash-v) top right / 3px 100% no-repeat;
     }
 
     .px-sparkle:hover .px-stars::before,
@@ -274,8 +288,8 @@
     }
 
     @media (prefers-reduced-motion: no-preference) {
-      .px-sparkle:hover,
-      .px-sparkle:focus-within {
+      .px-sparkle:hover .px-stars,
+      .px-sparkle:focus-within .px-stars {
         animation: px-flicker 1.2s steps(1, end) infinite;
       }
 
@@ -365,13 +379,13 @@
 
   @keyframes px-flicker {
     0% {
-      outline-color: currentColor;
+      color: currentColor;
     }
     60% {
-      outline-color: transparent;
+      color: transparent;
     }
     80% {
-      outline-color: currentColor;
+      color: currentColor;
     }
   }
 }
