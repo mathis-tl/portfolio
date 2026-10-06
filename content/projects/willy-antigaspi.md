@@ -2,7 +2,7 @@
 title: Willy Anti-Gaspi
 slug: willy-antigaspi
 icon: basket
-description: "Stage 2026 : fiabilisation des flux de données, recherche de prix publics comparables et auto-formatage d'offres fournisseurs Excel, avec l'équipe achats."
+description: "Stage 2026 : fiabilisation des flux de données, système de recherche de prix publics comparables et système d'auto-formatage d'offres fournisseurs Excel, avec l'équipe achats."
 tags: ["Python", "SQL", "Prefect", "Supabase", "Retool", "Airtable", "Google Sheets", "OpenAI"]
 githubUrl: https://github.com/mathis-tl/willy-antigaspi-data-internship
 featured: true
