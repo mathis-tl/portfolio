@@ -49,6 +49,7 @@ interests = [
   { label = "Football, pratiqué pendant 8 ans", icon = "ball" },
   { label = "Guitare, 5 ans de pratique (ça remonte un peu, mais je l'ai fait)", icon = "guitar" },
   { label = "Randonnée et bivouac", icon = "mountain" },
+  { label = "Gaming", icon = "gamepad" },
 ]
 
 [_.skills]
