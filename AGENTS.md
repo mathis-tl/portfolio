@@ -2,7 +2,7 @@
 
 ## Projet
 Portfolio statique de Mathis Telle, ingénieur informatique (Université Paris-Saclay, ISTY).
-Positionnement : "Ingénieur informatique orienté data". Recherche d'un premier CDI en data engineering (Paris, Île-de-France).
+Positionnement : "Ingénieur informatique - Data | AI". Recherche d'un premier poste en data et IA appliquée (Île-de-France). Ne jamais afficher de type de contrat.
 Public : recruteurs tech et leads data qui lisent le site en 30 secondes.
 
 ## Stack

@@ -7,7 +7,7 @@
 ![Lighthouse](https://img.shields.io/badge/Lighthouse_ordinateur-100-brightgreen)
 [![Licence MIT](https://img.shields.io/badge/licence-MIT-lightgrey)](LICENSE.md)
 
-Mon portfolio : ingénieur informatique orienté data (Université Paris-Saclay, ISTY), à la recherche d'un premier CDI en data engineering à Paris ou en Île-de-France.
+Mon portfolio : ingénieur informatique - Data | AI (Université Paris-Saclay, ISTY), à la recherche d'un premier poste en data et IA appliquée en Île-de-France.
 
 **En ligne : <https://portfolio-mathistelle.netlify.app>**
 
