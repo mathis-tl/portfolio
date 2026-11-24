@@ -60,7 +60,7 @@ pnpm check      # astro check (TypeScript)
 
 ```text
 content/          textes (configuration.toml) et fiches projets (Markdown)
-public/           fichiers statiques (CV PDF, icônes)
+public/           fichiers statiques (icônes)
 src/
   assets/         images (photo, photo en pixel art)
   components/     composants Astro (accueil, en-tête, pictos pixel)
