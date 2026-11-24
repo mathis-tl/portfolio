@@ -150,6 +150,23 @@ const configuration = defineCollection({
     }),
 
     /**
+     * The experience section of the homepage.
+     */
+    experience: z.object({
+      title: z.string(),
+      items: z.array(
+        z.object({
+          role: z.string(),
+          employer: z.string(),
+          period: z.string(),
+          bullets: z.array(z.string()),
+        }),
+      ),
+      extrasLabel: z.string(),
+      extras: z.array(z.string()),
+    }),
+
+    /**
      * The skills section of the homepage, grouped by theme.
      */
     skills: z.object({

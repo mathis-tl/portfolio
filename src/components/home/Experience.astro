@@ -1,0 +1,31 @@
+---
+import { getConfigurationCollection } from "../../lib/utils";
+
+const { data: config } = await getConfigurationCollection();
+const { experience } = config;
+---
+
+<h2 class="font-display text-lg sm:text-xl leading-loose">
+  <span class="px-name box-decoration-clone">{experience.title}</span>
+</h2>
+<ul class="my-8 flex flex-col gap-8">
+  {
+    experience.items.map((item) => (
+      <li class="flex flex-col gap-2">
+        <h3 class="text-xl font-medium">{item.role}</h3>
+        <p class="text-sm font-semibold">
+          {item.employer}, {item.period}
+        </p>
+        <ul class="flex list-disc flex-col gap-1 pl-6">
+          {item.bullets.map((bullet) => <li>{bullet}</li>)}
+        </ul>
+      </li>
+    ))
+  }
+  <li class="flex flex-col gap-2">
+    <h3 class="text-xl font-medium">{experience.extrasLabel}</h3>
+    <ul class="flex list-disc flex-col gap-1 pl-6">
+      {experience.extras.map((line) => <li>{line}</li>)}
+    </ul>
+  </li>
+</ul>

@@ -6,14 +6,14 @@ baseUrl = "https://portfolio-mathistelle.netlify.app"
 
 [_.globalMeta]
 title = "Mathis Telle"
-description = "Ingénieur informatique orienté data. Premier CDI en data engineering, Paris et Île-de-France."
-longDescription = "Ingénieur informatique, Université Paris-Saclay (ISTY), orienté data : pipelines de données, backend, sécurité, réseaux, outils front."
-keywords = ["data engineering", "Mathis Telle"]
+description = "Ingénieur informatique - Data | AI. Premier poste en data et IA appliquée, en Île-de-France."
+longDescription = "Ingénieur informatique, Université Paris-Saclay (ISTY) : fiabilisation de traitements de données, IA encadrée par du code, pipelines de données."
+keywords = ["data", "IA appliquée", "Mathis Telle"]
 
 [_.projectMeta]
 title = "Projets"
 description = "Projets de Mathis Telle."
-keywords = ["data engineering", "Mathis Telle"]
+keywords = ["data", "IA appliquée", "Mathis Telle"]
 
 [_.notFoundMeta]
 title = "Page introuvable"
@@ -21,7 +21,7 @@ description = "Cette page n'existe pas."
 
 [_.hero]
 title = "Mathis Telle"
-subtitle = "Ingénieur informatique orienté data<br />Université Paris-Saclay (ISTY)"
+subtitle = "Ingénieur informatique - Data | AI<br />Université Paris-Saclay (ISTY)"
 ctaText = "Voir les projets"
 ctaUrl = "/projects"
 
@@ -40,8 +40,9 @@ noProjects = "Aucun projet."
 [_.about]
 title = "À propos"
 paragraphs = [
-  "Ingénieur informatique (Université Paris-Saclay, ISTY), orienté data. J'intègre l'IA au quotidien, de façon réfléchie, dans mon travail comme dans mes projets : elle m'aide à aller plus vite, pas à ne plus comprendre ce que je livre.",
-  "Je préfère un résultat simple dont je sais répondre à un résultat impressionnant dont je ne sais pas expliquer les failles. Je cherche un premier CDI en data engineering, à Paris ou en Île-de-France.",
+  "Ingénieur informatique (Université Paris-Saclay, ISTY), je travaille sur la donnée et l'IA appliquée. Je fiabilise des traitements de données et j'utilise l'IA de façon encadrée : elle aide à aller plus vite, le code vérifie, et je sais expliquer ce que je livre.",
+  "J'aime construire de zéro et rendre mes idées tangibles : un pipeline qui tourne seul, un tableau de bord en ligne, un site que l'on peut ouvrir. Je préfère un résultat simple dont je sais expliquer les failles à un résultat impressionnant que je ne maîtrise pas.",
+  "Je cherche mon premier poste en data et IA appliquée, en Île-de-France.",
 ]
 interestsLabel = "Ce que j'aime"
 interests = [
@@ -55,12 +56,32 @@ interests = [
 [_.skills]
 title = "Compétences"
 groups = [
-  { label = "Données", icon = "database", items = ["SQL", "Prefect", "dbt", "DuckDB", "Supabase", "Airtable", "ETL/ELT", "Parquet", "GitHub Actions", "Google Sheets"] },
-  { label = "Langages", icon = "code", items = ["Python", "JavaScript", "TypeScript", "Java", "C", "C++", "R"] },
+  { label = "Données", icon = "database", items = ["SQL", "Prefect", "dbt", "DuckDB", "PostgreSQL (Supabase)", "Airtable", "ETL/ELT", "Parquet", "GitHub Actions", "Google Sheets"] },
+  { label = "Langages", icon = "code", items = ["Python", "JavaScript", "TypeScript", "C"] },
   { label = "Qualité et fiabilité", icon = "check", items = ["Tests unitaires et non-régression", "Validation des données", "Scoring explicable", "Revue humaine des cas douteux", "Benchmarks"] },
   { label = "IA", icon = "chip", items = ["API OpenAI", "LLM avec garde-fous déterministes"] },
-  { label = "Backend, réseaux et sécurité", icon = "server", items = ["Flask", "MQTT", "ITS-G5", "PKI (CRL, OCSP)", "Docker Compose"] },
-  { label = "Front et outils", icon = "screen", items = ["Astro", "React", "Node.js", "Tailwind CSS", "Retool", "Netlify", "Git", "Docker"] },
+  { label = "Backend, réseaux et sécurité", icon = "server", items = ["Flask", "MQTT", "ITS-G5", "PKI (CRL, OCSP)", "Docker", "Docker Compose"] },
+  { label = "Front et outils", icon = "screen", items = ["Astro", "React", "Node.js", "Tailwind CSS", "Retool", "Netlify", "Git"] },
+]
+
+[_.experience]
+title = "Expérience"
+items = [
+  { role = "Data Engineer, stage de 6 mois", employer = "Willy Anti-Gaspi", period = "2026", bullets = [
+    "Fiabilisation de traitements de données en production : temps d'exécution divisé par 7.",
+    "Conception d'un service d'auto-formatage d'offres fournisseurs : l'IA lit le fichier, le code vérifie, avec 26 contrôles qualité.",
+    "Automatisation de tâches de l'équipe Achats par une IA encadrée par du code : environ 50 % du temps de l'équipe libéré.",
+  ] },
+  { role = "Ingénieur full stack, stage de 4 mois", employer = "Collectivité territoriale de Martinique", period = "2024", bullets = [
+    "Développement et amélioration d'outils internes (JavaScript, HTML/CSS, WordPress).",
+    "Écriture de scripts Python pour automatiser des tâches répétitives.",
+    "Analyse des besoins des utilisateurs et traduction en solutions techniques.",
+  ] },
+]
+extrasLabel = "Langues et recommandation"
+extras = [
+  "Anglais : TOEIC 900/990.",
+  "Lettre de recommandation disponible sur demande.",
 ]
 
 [_.lighthouse]
